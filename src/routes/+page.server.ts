@@ -3,5 +3,5 @@ import { redirect } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async ({ parent }) => {
 	const planetsJson = await parent();
-	redirect(307, `/${planetsJson.planets.data?.[0].id}`);
+	redirect(307, `/${planetsJson.data?.[0].id}`);
 };
